@@ -1,6 +1,6 @@
 def consolidate_cart(cart)
   haxh = {}
-  cart.each do |food,info|
+  cart.each do |food|
     
 end
 
