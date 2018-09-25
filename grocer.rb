@@ -1,5 +1,7 @@
 def consolidate_cart(cart)
-  
+  haxh = {}
+  cart.each do |food,info|
+    
 end
 
 def apply_coupons(cart, coupons)
