@@ -18,7 +18,6 @@ def apply_coupons(cart, coupons)
   cart.each do |key,value|
     haxh[key] = value
     coupons.each do |coupon|
-      binding.pry
       if key == coupon[:item]
         if value[:count] >= coupon[:num]
           value[:count] -= coupon[:num]
@@ -26,6 +25,7 @@ def apply_coupons(cart, coupons)
            haxh[key + "W/COUPON"] += 1 
          else
            haxh[key + "W/COUPON"] = {
+             binding.pry
              :price => [coupon][:cost],
              :clearance => [value][:clearance],
              :count => 1
