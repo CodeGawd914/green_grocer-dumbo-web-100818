@@ -1,7 +1,8 @@
 def consolidate_cart(cart)
   haxh = {}
   cart.each do |food|
-    item = food[0]
+    item = food.keys[0]
+    
     
 end
 
