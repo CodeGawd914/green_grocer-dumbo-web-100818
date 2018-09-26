@@ -21,7 +21,7 @@ def apply_coupons(cart, coupons)
       if key == coupon[:item]
         if value[:count] >= coupon[:num]
           value[:count] -= coupon[:num]
-        else
+          if 
 end
 
 def apply_clearance(cart)
