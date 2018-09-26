@@ -19,7 +19,8 @@ def apply_coupons(cart, coupons)
     haxh[key] = value
     coupons.each do |coupon|
       if key == coupon[:item]
-        if key
+        if value[:count] >= coupon[:num]
+          
 end
 
 def apply_clearance(cart)
