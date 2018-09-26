@@ -16,6 +16,7 @@ end
 def apply_coupons(cart, coupons)
   cart.each do |key,value|
     haxh = value
+    coupons.each do |coupon|
 end
 
 def apply_clearance(cart)
