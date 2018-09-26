@@ -1,9 +1,9 @@
+
 def consolidate_cart(cart)
   haxh = {}
   cart.each do |food|
     item = food.keys[0]
-    haxh[item]=
-    
+    haxh[item] = food.values[0}
 end
 
 def apply_coupons(cart, coupons)
