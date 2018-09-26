@@ -48,21 +48,21 @@ total = 0
     cart = apply_coupons(cart, coupons)
     cart_clearance = apply_clearance(cart)
     if cart_clearance.length > 1
-      cart_clearance.each do |item, details|
-        if details[:count] >=1
-          total += (details[:price]*details[:count])
+      cart_clearance.each do |key, value|
+        if value[:count] >=1
+          total += (value[:price]*value[:count])
         end
       end
     else
-      cart_clearance.each do |item, details|
-        total += (details[:price]*details[:count])
+      cart_clearance.each do |key, value|
+        total += (value[:price]*value[:count])
       end
     end
   else
     cart = apply_coupons(cart, coupons)
     cart_clearance = apply_clearance(cart)
-    cart_clearance.each do |item, details|
-      total += (details[:price]*details[:count])
+    cart_clearance.each do |key, value|
+      total += (value[:price]*value[:count])
     end
   end
   
