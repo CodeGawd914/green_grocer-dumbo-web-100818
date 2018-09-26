@@ -25,7 +25,9 @@ def apply_coupons(cart, coupons)
          if haxh.include?(key + "W/COUPON")
            haxh[key + "W/COUPON"] += 1 
          else
-           haxh[key]
+           haxh[key + "W/COUPON"] = {
+             :price =>
+           }
           end
         end
       end
