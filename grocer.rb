@@ -1,5 +1,5 @@
 require 'pry'
-def consolidate_cart(cart:[])
+def consolidate_cart(cart)
   haxh = {}
   cart.each do |food|
     item = food.keys[0]
@@ -13,7 +13,7 @@ def consolidate_cart(cart:[])
   haxh
 end
 
-def apply_coupons(cart:[], coupons:[])
+def apply_coupons(cart, coupons)
   haxh = {}
   cart.each do |key,value|
     haxh[key] = value
