@@ -3,7 +3,7 @@ def consolidate_cart(cart)
   haxh = {}
   cart.each do |food|
     item = food.keys[0]
-    haxh[item] = food.values[0}
+    haxh[item] = food.values[0]
     if haxh[item][:count]
       haxh[item][:count] = 1 
     else
