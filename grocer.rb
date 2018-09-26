@@ -15,16 +15,14 @@ end
 
 def apply_coupons(cart, coupons)
     coupons.each do |coupon|
-      if  cart[coupon[:item]] 
-        binding.pry
-        if value[:count] >= coupon[:num]
-          value[:count] -= coupon[:num]
-         if haxh.include?(k + "W/COUPON")
-           haxh[key + "W/COUPON"] += 1 
+      if  cart[coupon[:item]] && cart[coupon[:item]][:count] >= coupon[:num]
+          cart[coupon[:item]][:count] -= coupon[:num]
+         if cart[coupon[:item] + "W/COUPON"]
+           cart[coupon[:item] + "W/COUPON"][:count] += 1 
          else
-           haxh[key + "W/COUPON"] = {
+           cart[coupon[:item] + "W/COUPON"] = {
              :price => [coupon][:cost],
-             :clearance => [value][:clearance],
+             :clearance => cart[:clearance],
              :count => 1
            }
           end
