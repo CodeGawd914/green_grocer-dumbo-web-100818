@@ -24,7 +24,6 @@ def apply_coupons(cart, coupons)
          if haxh.include?(key + "W/COUPON")
            haxh[key + "W/COUPON"] += 1 
          else
-           binding.pry
            haxh[key + "W/COUPON"] = {
              :price => [coupon][:cost],
              :clearance => [value][:clearance],
@@ -36,7 +35,9 @@ def apply_coupons(cart, coupons)
     end
   end
     haxh
+    binding.pry
 end
+
 
 def apply_clearance(cart)
   cart. each do |key,value|
