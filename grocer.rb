@@ -1,4 +1,4 @@
-
+require 'pry'
 def consolidate_cart(cart)
   haxh = {}
   cart.each do |food|
@@ -21,7 +21,8 @@ def apply_coupons(cart, coupons)
       if key == coupon[:item]
         if value[:count] >= coupon[:num]
           value[:count] -= coupon[:num]
-          if 
+          if haxh.include?(key + "W/COUPON")
+            binding.pry
 end
 
 def apply_clearance(cart)
