@@ -21,19 +21,19 @@ def apply_coupons(cart, coupons)
       if key == coupon[:item]
         if value[:count] >= coupon[:num]
           value[:count] -= coupon[:num]
-          binding.pry
          if haxh.include?(key + "W/COUPON")
            haxh[key + "W/COUPON"] += 1 
          else
            haxh[key + "W/COUPON"] = {
              :price => [coupon][:cost]
              :clearance => [value][:clearance]
-             
+             :count => 1
            }
           end
         end
       end
     end
+    haxh
 end
 
 def apply_clearance(cart)
