@@ -22,7 +22,10 @@ def apply_coupons(cart, coupons)
         if value[:count] >= coupon[:num]
           value[:count] -= coupon[:num]
           binding.pry
-         # if haxh.include?(key + "W/COUPON")
+         if haxh.include?(key + "W/COUPON")
+           haxh[key + "W/COUPON"] += 1 
+         else
+           haxh[key]
           end
         end
       end
