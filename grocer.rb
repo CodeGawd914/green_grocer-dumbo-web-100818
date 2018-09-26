@@ -20,7 +20,8 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon|
       if key == coupon[:item]
         if value[:count] >= coupon[:num]
-          
+          value[:count] -= coupon[:num]
+        else
 end
 
 def apply_clearance(cart)
