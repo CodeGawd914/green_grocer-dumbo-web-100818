@@ -14,10 +14,6 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  haxh = {}
-  cart.each do |key,value|
-    haxh[key] = value
-    binding.pry
     coupons.each do |coupon|
       if key == coupon[:item]
         if value[:count] >= coupon[:num]
@@ -34,9 +30,8 @@ def apply_coupons(cart, coupons)
         end
       end
     end
+    return cart
   end
-    haxh
-end
 
 
 def apply_clearance(cart)
