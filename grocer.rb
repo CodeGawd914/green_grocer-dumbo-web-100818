@@ -13,7 +13,7 @@ def consolidate_cart(cart)
   haxh
 end
 
-def apply_coupons(cart, coupons)
+def apply_coupons(cart:[], coupons:[])
   haxh = {}
   cart.each do |key,value|
     haxh[key] = value
