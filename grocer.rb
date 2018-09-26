@@ -18,6 +18,7 @@ def apply_coupons(cart, coupons)
   cart.each do |key,value|
     haxh[key] = value
     coupons.each do |coupon|
+      if key == coupon[item]
 end
 
 def apply_clearance(cart)
