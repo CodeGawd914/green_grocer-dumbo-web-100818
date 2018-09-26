@@ -55,5 +55,3 @@ end 	  consolidated = consolidate_cart(cart: cart)
   end
   total  
 end
-  
-end
