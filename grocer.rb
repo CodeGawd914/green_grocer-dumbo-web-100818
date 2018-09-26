@@ -10,6 +10,7 @@ def consolidate_cart(cart)
       haxh[item][:count] += 1 
     end
   end
+  haxh
 end
 
 def apply_coupons(cart, coupons)
