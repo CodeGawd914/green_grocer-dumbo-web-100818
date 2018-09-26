@@ -15,7 +15,8 @@ end
 
 def apply_coupons(cart, coupons)
     coupons.each do |coupon|
-      if key == coupon[:item]
+      if  cart[coupon[:item]] 
+        binding.pry
         if value[:count] >= coupon[:num]
           value[:count] -= coupon[:num]
          if haxh.include?(k + "W/COUPON")
