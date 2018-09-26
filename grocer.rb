@@ -4,6 +4,7 @@ def consolidate_cart(cart)
   cart.each do |food|
     item = food.keys[0]
     haxh[item] = food.values[0}
+    if haxh[item]
 end
 
 def apply_coupons(cart, coupons)
