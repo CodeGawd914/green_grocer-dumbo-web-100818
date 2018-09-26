@@ -16,7 +16,7 @@ end
 def apply_coupons(cart, coupons)
   haxh = {}
   cart.each do |key,value|
-    haxh = value
+    haxh[key] = value
     coupons.each do |coupon|
 end
 
