@@ -14,7 +14,6 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart:[], coupons:[])
-  # code here	  
   new_cart = {}
   
   cart.each do |food_item, info_hash|
@@ -41,7 +40,7 @@ def apply_coupons(cart:[], coupons:[])
     end
   end
    new_cart
-end	end
+end	
 
 # def apply_coupons(cart:[], coupons:[])
 #   haxh = {}
