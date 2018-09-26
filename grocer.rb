@@ -27,7 +27,8 @@ def apply_coupons(cart, coupons)
          else
            haxh[key + "W/COUPON"] = {
              :price => [coupon][:cost]
-             :clearance => [key][:clearance]
+             :clearance => [value][:clearance]
+             
            }
           end
         end
